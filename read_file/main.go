@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -13,7 +13,7 @@ var (
 func main() {
 	kingpin.Parse()
 
-	defer func () {
+	defer func() {
 		(*file).Close()
 	}()
 

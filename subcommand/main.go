@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"gopkg.in/alecthomas/kingpin.v2"
+	"os"
 )
 
 var (
@@ -11,16 +11,16 @@ var (
 
 	itemCommand = app.Command("item", "Item management")
 	// item add
-	itemAdd = itemCommand.Command("add", "Add item")
+	itemAdd     = itemCommand.Command("add", "Add item")
 	itemAddName = itemAdd.Flag("name", "item name").Required().String()
 	// item del
-	itemDel = itemCommand.Command("del", "Delete item")
+	itemDel      = itemCommand.Command("del", "Delete item")
 	itemDelName  = itemDel.Flag("name", "item name").Required().String()
 	itemDelForce = itemDel.Flag("force", "force delete").Short('f').Bool()
 
 	personCommand = app.Command("person", "Person management")
 	// item add
-	personAdd = personCommand.Command("add", "Add person")
+	personAdd     = personCommand.Command("add", "Add person")
 	personAddName = personAdd.Flag("name", "person name").Required().String()
 )
 
