@@ -13,6 +13,6 @@ func main() {
 	kingpin.Parse()
 
 	for _, file := range *files {
-		fmt.Println(file)
+		fmt.Printf("Exists file: %s\n", file)
 	}
 }
